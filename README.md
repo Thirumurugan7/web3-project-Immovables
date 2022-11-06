@@ -31,10 +31,20 @@ From there, follow the instructions on the hosted React app. It will walk you th
 
 ## FAQ
 
-- __How do I use this with Ganache (or any other network)?__
+- **How do I use this with Ganache (or any other network)?**
 
   The Truffle project is set to deploy to Ganache by default. If you'd like to change this, it's as easy as modifying the Truffle config file! Check out [our documentation on adding network configurations](https://trufflesuite.com/docs/truffle/reference/configuration/#networks). From there, you can run `truffle migrate` pointed to another network, restart the React dev server, and see the change take place.
 
-- __Where can I find more resources?__
+- **Where can I find more resources?**
 
   This Box is a sweet combo of [Truffle](https://trufflesuite.com) and [Create React App](https://create-react-app.dev). Either one would be a great place to start!
+
+# TO compile and Deploy with Hardhat
+
+step1:npm install --save-dev hardhat --force
+step2: npm install --save-dev @nomicfoundation/hardhat-toolbox --force
+Step3:npm i --dev hardhat-gas-reporter @nomiclabs/hardhat-etherscan --force
+Step4:npm i dotenv solidity-coverage -f
+Step5:npm i --dev @nomiclabs/hardhat-waffle -f
+Step6: To Compile ==> npx hardhat compile -- network "Network_Name"
+Step7:To deploy ==> npx hardhat deploy --network "Network_Name"

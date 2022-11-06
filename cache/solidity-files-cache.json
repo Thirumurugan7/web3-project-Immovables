@@ -1,0 +1,75 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\rsakt\\Desktop\\project-web-3\\Immovables-web3build\\src\\contracts\\Marketplace.sol": {
+      "lastModificationDate": 1667723210451,
+      "contentHash": "45a5f42251d9bd324d5d482dbb9a1d38",
+      "sourceName": "src/contracts/Marketplace.sol",
+      "solcConfig": {
+        "version": "0.5.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "Marketplace"
+      ]
+    },
+    "C:\\Users\\rsakt\\Desktop\\project-web-3\\Immovables-web3build\\src\\contracts\\Migrations.sol": {
+      "lastModificationDate": 1667723210452,
+      "contentHash": "9f39b77d715a34495d6ab772a0182a34",
+      "sourceName": "src/contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.5.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.21 <0.6.0"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    }
+  }
+}
