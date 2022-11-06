@@ -65,14 +65,16 @@ class AddProperty extends Component {
     this.purchaseProduct = this.purchaseProduct.bind(this);
   }
 
-  createProduct(name, price) {
+  createProduct(name, price, sqft) {
+    console.log("entered createProduct");
     this.setState({ loading: true });
     this.state.marketplace.methods
-      .createProduct(name, price)
+      .createProduct(name, price, sqft)
       .send({ from: this.state.account })
       .once("receipt", (receipt) => {
         this.setState({ loading: false });
       });
+    console.log("ended create Product");
   }
 
   purchaseProduct(id, price) {

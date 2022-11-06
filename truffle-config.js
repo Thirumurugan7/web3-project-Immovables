@@ -21,6 +21,7 @@ module.exports = {
           `https://polygon-mumbai.gateway.pokt.network/v1/lb/a2a007d2aa9b3b52bd9c08a5`
         ),
       network_id: 80001,
+      networkCheckTimeout: 10000,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true,

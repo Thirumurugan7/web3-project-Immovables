@@ -12,6 +12,7 @@ class BuyProperty extends Component {
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Price</th>
+              <th scope="col">Sqft</th>
               <th scope="col">Owner</th>
               <th scope="col"></th>
             </tr>
@@ -29,6 +30,7 @@ class BuyProperty extends Component {
                     )}{" "}
                     Eth
                   </td>
+                  <td>{product.sqft}</td>
                   <td>{product.owner}</td>
                   <td>
                     {!product.purchased ? (
@@ -36,10 +38,12 @@ class BuyProperty extends Component {
                         className="buy-btn"
                         name={product.id}
                         value={product.price}
+                        sqft={product.sqft}
                         onClick={(event) => {
                           this.props.purchaseProduct(
                             event.target.name,
-                            event.target.value
+                            event.target.value,
+                            event.targer.sqft
                           );
                         }}
                       >

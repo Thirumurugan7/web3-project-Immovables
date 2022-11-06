@@ -15,7 +15,10 @@ class Main extends Component {
               this.productPrice.value.toString(),
               "Ether"
             );
-            this.props.createProduct(name, price);
+            const sqft = this.productSqft.value;
+            console.log(name, price, sqft);
+            this.props.createProduct(name, price, sqft);
+            console.log("create product called");
           }}
         >
           <div className="form-group mr-sm-2">
@@ -42,8 +45,21 @@ class Main extends Component {
               required
             />
           </div>
+          <div className="form-group mr-sm-2">
+            <input
+              id="productSqft"
+              type="text"
+              ref={(input) => {
+                this.productSqft = input;
+              }}
+              className="form-control"
+              placeholder="Property Sqft"
+              required
+            />
+          </div>
           <button type="submit" className="btn btn-primary">
             Add Property
+            {console.log(this.productName, this.productPrice, this.productSqft)}
           </button>
         </form>
         <p>&nbsp;</p>
@@ -54,6 +70,7 @@ class Main extends Component {
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Price</th>
+              <th scope="col">Sqft</th>
               <th scope="col">Owner</th>
               <th scope="col"></th>
             </tr>
@@ -71,6 +88,8 @@ class Main extends Component {
                     )}{" "}
                     Eth
                   </td>
+                  {console.log(product.sqft.toString())}
+                  <td>{parseInt(product.sqft, 4)}</td>
                   <td>{product.owner}</td>
                   <td>
                     {!product.purchased ? (
@@ -78,9 +97,11 @@ class Main extends Component {
                         className="buy-btn"
                         name={product.id}
                         value={product.price}
+                        sqft={product.sqft}
                         onClick={(event) => {
                           this.props.purchaseProduct(
                             event.target.name,
+                            event.target.value,
                             event.target.value
                           );
                         }}
